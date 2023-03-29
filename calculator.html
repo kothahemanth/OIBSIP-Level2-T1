@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="calci.css">
+<script language="javascript">
+function read(n)
+{
+document.getElementById("restxt").value+=n;
+}
+function check()
+{
+var a=eval(document.getElementById("restxt").value);
+document.getElementById("restxt").value=a;
+}
+function back() 
+{
+    var b = document.getElementById("restxt").value;
+    document.getElementById("restxt").value = document.getElementById("restxt").value.slice(0, -1);
+}
+function clr()
+{
+ document.getElementById("restxt").value= '';
+}
+</script>
+</head>
+<body align="center">
+<h1> Calculator </h1>
+<table align="center" border = "5">
+<tr>
+<th colspan="4"><input type="text" id="restxt"></input></th>
+</tr>
+<tr colspan="2">
+<th><input type="button" id="btn1" value="(" onClick="read('(')"></input></th>
+<th><input type="button" id="btn2" value=")" onClick="read(')')"></input></th>
+<th><input type="button" id="btn3" value="C" onClick="clr()"></input></th>
+<th><input type="button" id="btn4" value="<-" onClick="back()"></input></th>
+</tr>
+<tr colspan="2">
+<th><input type="button" id="btn5" value="7" onClick="read('7')"></input></th>
+<th><input type="button" id="btn6" value="8" onClick="read('8')"></input></th>
+<th><input type="button" id="btn7" value="9" onClick="read('9')"></input></th>
+<th><input type="button" id="btn8" value="/" onClick="read('/')"></input></th>
+</tr>
+<tr colspan="2">
+<th><input type="button" id="btn9" value="4" onClick="read('4')"></input></th>
+<th><input type="button" id="btn10" value="5" onClick="read('5')"></input></th>
+<th><input type="button" id="btn11" value="6" onClick="read('6')"></input></th>
+<th><input type="button" id="btn12" value="*" onClick="read('*')"></input></th>
+</tr>
+<tr colspan="2">
+<th><input type="button" id="btn13" value="1" onClick="read('1')"></input></th>
+<th><input type="button" id="btn14" value="2" onClick="read('2')"></input></th>
+<th><input type="button" id="btn15" value="3" onClick="read('3')"></input></th>
+<th><input type="button" id="btn16" value="-" onClick="read('-')"></input></th>
+</tr>
+<tr colspan="2">
+<th><input type="button" id="btn17" value="0" onClick="read('0')"></input></th>
+<th><input type="button" id="btn18" value="." onClick="read('.')"></input></th>
+<th><input type="button" id="btn19" value="=" onClick="check()"></input></th>
+<th><input type="button" id="btn20" value="+" onClick="read('+')"></input></th>
+</tr>
+</table>
+</body>
+</html>
